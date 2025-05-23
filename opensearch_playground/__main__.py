@@ -14,16 +14,12 @@ _user_password = env_vars['USER_PASSWORD']
 
 class ConfigOpenSearch:
 
-    host = 'api.novasearch.org'
-    port = 443
+    host = env_vars['HOST']
+    port = env_vars['PORT']
     index_name = "farfetch_images"
     user = _user_id  # Add your username here.
     password = _user_password  # Add your user password here. For testing only. Don't store credentials in code.
-    source = ['product_id', 'product_family', 'product_category', 'product_sub_category', 'product_gender',
-               'product_main_colour', 'product_second_color', 'product_brand', 'product_materials',
-               'product_short_description', 'product_attributes', 'product_image_path',
-               'product_highlights', 'outfits_ids', 'outfits_products']
-    source_with_image_embedding = source + ['image_embedding']
+    source = [] # TODO : Add your source fields here. For example: ['field1', 'field2']
 
     client = OpenSearch(
         hosts=[{'host': host, 'port': port}],
