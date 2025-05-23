@@ -1,8 +1,8 @@
 ﻿"""
 title: OpenSearch Tool
 author: Pedro Valente
-author_url: TODO
-git_url: TODO
+author_url: https://github.com/pmvalente171
+git_url: https://github.com/pmvalente171/open-webui_opensearch_tool
 description: OpenSearch tool for Open Web UI, allowing you to search and retrieve documents from an OpenSearch index.
 required_open_webui_version: 0.5.0
 requirements: langchain-openai, langgraph, ollama, langchain_ollama, opensearch-py
