@@ -16,7 +16,7 @@ class ConfigOpenSearch:
 
     host = env_vars['HOST']
     port = env_vars['PORT']
-    index_name = "farfetch_images"
+    index_name = "images"
     user = _user_id  # Add your username here.
     password = _user_password  # Add your user password here. For testing only. Don't store credentials in code.
     source = [] # TODO : Add your source fields here. For example: ['field1', 'field2']

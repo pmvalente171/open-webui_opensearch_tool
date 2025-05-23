@@ -14,6 +14,12 @@ from opensearchpy import OpenSearch
 from pydantic import BaseModel, Field
 
 
+def print_error(error: str) -> str:
+    return """
+```md
+# Error: {error}
+```"""
+
 class Tools:
     class Valves(BaseModel):
         """Editable fields of the tool"""
@@ -137,9 +143,7 @@ class Tools:
                 {
                     "type": "message",
                     "data": {
-                        "content": f"""```
-    {e}
-    ```"""
+                        "content": print_error(f"An error occurred while querying OpenSearch:\n{str(e)}")
                     },
                 }
             )
